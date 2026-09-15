@@ -3,7 +3,6 @@ import {
   ArrowRight,
   Basketball,
   Briefcase,
-  ChartLineUp,
   Check,
   Clock,
   Handshake,
@@ -11,12 +10,14 @@ import {
   Quotes,
   ShieldCheck,
   Target,
-  UserFocus,
-  UsersThree
+  UserFocus
 } from '@phosphor-icons/react'
 import { Header, Footer } from './SiteChrome'
 import InstagramReel from './InstagramReel'
+import WistiaVideo from './WistiaVideo'
 import './LandingPageV2.css'
+
+const LANDING_VSL_ID = import.meta.env.VITE_WISTIA_LANDING_VSL || 'WISTIA_LANDING_VSL'
 
 const proofStats = [
   { value: '59%', label: 'of surveyed college athletes said they earned less from NIL than expected' },
@@ -65,7 +66,7 @@ const faqs = [
   ['Do I need a huge following?', 'No specific follower threshold is required. Audience size can matter, but so can audience relevance, story, content quality, engagement, professionalism, local relevance, and brand fit.'],
   ['Do you guarantee NIL deals or income?', 'No. NIL Playbook cannot control brand decisions, market demand, timing, fit, or athlete execution. The program focuses on the systems and professional preparation you can control.'],
   ['What if I do not want to become an influencer?', 'You do not have to. The goal is to build around what is already true about you, your story, personality, interests, values, community, and goals, not create a fake online persona.'],
-  ['Why would I pay for this if NIL information is free online?', 'Information is already commoditized. NIL Deal Accelerator is positioned as personalized implementation, feedback, professional assets, accountability, and opportunity infrastructure built around you.'],
+  ['Why would I pay for this if NIL information is free online?', 'Information is already commoditized. NIL Deal Accelerator is personalized implementation, feedback, professional assets, accountability, and opportunity infrastructure built around you.'],
   ['Can I do this while I am in season?', 'The system is designed around the athlete schedule. The objective is not to make NIL another full-time job. It is to install a repeatable operating system that reduces random work and makes execution more efficient.']
 ]
 
@@ -94,6 +95,16 @@ export default function LandingPageV2() {
               <a className="v2-text-link" href="#system">See the 5-play system <ArrowRight size={15} /></a>
             </div>
             <div className="v2-guardrail"><ShieldCheck size={18} weight="fill" /> No guaranteed sponsorships, income, follower growth, or response rates.</div>
+
+            <div className="landing-vsl-shell v2-vsl-shell">
+              <WistiaVideo
+                mediaId={LANDING_VSL_ID}
+                title="How College Athletes Can Build a Professional NIL Opportunity System"
+                eyebrow="NIL DEAL ACCELERATOR VSL"
+                duration="9 to 12 minutes"
+                chapters={['Who this is for', 'Why listen to me', 'The Marketability Gap', 'The 5-Play System', 'The offer and investment', 'Objections', 'Who should apply']}
+              />
+            </div>
           </div>
         </section>
 
@@ -141,42 +152,42 @@ export default function LandingPageV2() {
         <section className="v2-founder" id="founder" data-belief="authority-and-authenticity">
           <div className="v2-reading-shell">
             <div className="v2-section-intro">
-              <div className="v2-kicker v2-kicker-light">WHY NIL PLAYBOOK EXISTS</div>
-              <h2>A shattered backboard changed the direction of Brian “BB” Knight's life.</h2>
-              <p>More than six years ago, BB happened to capture a video of himself shattering a backboard. The video went viral and showed him what one piece of content could do. Instead of treating it like a lucky moment, he started taking content seriously.</p>
+              <div className="v2-kicker v2-kicker-light">WHY I BUILT NIL PLAYBOOK</div>
+              <h2>I’m Brian “BB” Knight.</h2>
+              <p>I am not teaching NIL from the sidelines. I am a Division I basketball player, creator, graduate student, and founder who has had to build my own audience and commercial identity while navigating the same practices, travel, schoolwork, injuries, transfers, and uncertainty other athletes face.</p>
             </div>
 
             <div className="v2-founder-copy">
-              <p>He kept documenting the journey while playing Division I basketball. That meant building around practice, lifts, travel, school, games, injuries, recovery, and the pressure to perform.</p>
-              <p>The hardest part was not understanding that social media mattered. It was finding the time to film, edit, publish, build an audience, and handle opportunities while basketball still demanded most of his attention.</p>
+              <p>More than six years ago, I happened to capture a video of myself shattering a backboard. That video went viral, and it showed me what one piece of content could do. Instead of treating it like a lucky moment, I started taking content seriously.</p>
+              <p>I kept documenting my life while playing Division I basketball. The hardest part was never understanding that social media mattered. It was finding time to film, edit, publish, build an audience, and handle opportunities while basketball still demanded most of my attention.</p>
             </div>
 
             <InstagramReel />
 
             <div className="v2-founder-claim">
-              <span>IN BB'S WORDS</span>
+              <span>IN MY WORDS</span>
               <blockquote>“Last month, I contracted over $12,000 from social media, all while playing Division 1 basketball.”</blockquote>
-              <p>Individual results vary. This is BB Knight's personal experience and is not a representation or guarantee of another athlete's earnings or results.</p>
+              <p>Individual results vary. This is my personal experience and is not a representation or guarantee of another athlete's earnings or results.</p>
             </div>
 
             <div className="v2-founder-bridge">
               <Basketball size={28} weight="duotone" />
               <div>
-                <h3>He did not build his brand instead of being an athlete. He built it while being one.</h3>
-                <p>That is the perspective behind NIL Playbook. BB believes athletes should not have to choose between taking their sport seriously and taking their future seriously.</p>
+                <h3>I did not build my brand instead of being an athlete. I built it while being one.</h3>
+                <p>I know how hard it is to take your sport seriously while also trying to build something off the court. I do not believe athletes should have to choose between taking their game seriously and taking their future seriously.</p>
               </div>
             </div>
 
             <div className="v2-founder-origin">
               <div className="v2-kicker v2-kicker-light">THE QUESTIONS THAT BECAME THE BUSINESS</div>
-              <h3>As BB's platform grew, other athletes started asking how he was doing it.</h3>
+              <h3>As my platform grew, other athletes started asking me how I was doing it.</h3>
               <div className="v2-question-list">
                 <p>How do I reach out to brands?</p>
                 <p>What do you use to edit?</p>
                 <p>How do you make content consistently?</p>
                 <p>How do you balance your sport with social media?</p>
               </div>
-              <p className="v2-founder-conclusion">NIL Playbook was built to turn those scattered answers into an organized system athletes can actually execute.</p>
+              <p className="v2-founder-conclusion">That is why I built NIL Playbook. I wanted to turn the lessons I learned through experience into an organized system other athletes can actually execute. I do not believe every athlete needs to become an influencer. I believe every athlete should understand how to use the attention, story, relationships, and opportunities that come with college sports to build something that can still matter after the jersey comes off.</p>
             </div>
           </div>
         </section>
