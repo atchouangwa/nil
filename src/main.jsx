@@ -2,6 +2,7 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles.css'
 import './components/ConfirmedVideoLibrary.css'
+import './components/LandingVsl.css'
 import App from './App'
 
 createRoot(document.getElementById('root')).render(
