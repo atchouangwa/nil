@@ -29,10 +29,10 @@ const plays = [
 ]
 
 const founderTimeline = [
-  { icon: Basketball, label: 'ATHLETE', title: 'From record-setting high school scorer to Division I basketball', copy: 'At Tompkins High School in Katy, BB finished with school records of 1,687 career points and 247 made three-pointers. His senior season was cut short by injury, then his college path took him through Tulsa, Lamar, and now UTRGV.' },
-  { icon: TrendUp, label: 'CREATOR', title: 'Built an audience while still living the athlete schedule', copy: 'Public NIL profiles currently list roughly 97,000 to 99,000 Instagram followers and more than 51,000 TikTok followers. He built that audience while managing practice, lifting, travel, school, injuries, transfers, and competition.' },
-  { icon: GraduationCap, label: 'STUDENT', title: 'Still in the arena, now pursuing his MBA', copy: 'BB is a graduate student at UTRGV and publicly says he is working toward a master’s in business administration. His athlete profile also highlights faith, family, fashion, art, and short-form content as important parts of his identity beyond basketball.' },
-  { icon: UsersThree, label: 'FOUNDER', title: 'The questions in his DMs became the reason for NIL Playbook', copy: 'As his platform grew, athletes began asking him how to reach brands, what he uses to edit, how to make content, and how to balance sport with social media. Instead of leaving those answers scattered across DMs, he decided to build a system that other athletes can actually follow.' }
+  { icon: Basketball, label: 'ATHLETE', title: 'I went from record-setting high school scorer to Division I basketball', copy: 'At Tompkins High School in Katy, I finished with school records of 1,687 career points and 247 made three-pointers. My senior season was cut short by injury, and my college path has taken me through Tulsa, Lamar, and now UTRGV.' },
+  { icon: TrendUp, label: 'CREATOR', title: 'I built an audience while still living the athlete schedule', copy: 'My public NIL profiles currently list roughly 97,000 to 99,000 Instagram followers and more than 51,000 TikTok followers. I built that audience while managing practice, lifting, travel, school, injuries, transfers, and competition.' },
+  { icon: GraduationCap, label: 'STUDENT', title: 'I am still in the arena, now pursuing my MBA', copy: 'I am a graduate student at UTRGV working toward my master’s in business administration. Faith, family, fashion, art, basketball, and short-form content are all part of who I am beyond the game.' },
+  { icon: UsersThree, label: 'FOUNDER', title: 'The questions in my DMs became the reason I built NIL Playbook', copy: 'As my platform grew, athletes kept asking me how to reach brands, what I use to edit, how I create content, and how I balance sport with social media. I did not want those answers to stay scattered across DMs, so I decided to build a system other athletes could actually follow.' }
 ]
 
 const deliverables = [
@@ -124,9 +124,9 @@ export default function LandingPage() {
           <div className="founder-header">
             <div className="founder-monogram" aria-hidden="true"><span>BB</span><small>04</small></div>
             <div>
-              <div className="kicker">FOUNDED BY AN ATHLETE STILL LIVING IT</div>
-              <h2>Meet Brian “BB” Knight</h2>
-              <p className="founder-lede">BB is not teaching NIL from the sidelines. He is a Division I basketball player, creator, graduate student, and founder who has had to build his own audience and commercial identity while navigating the same schedule, injuries, transfers, and uncertainty other athletes face.</p>
+              <div className="kicker">WHY I BUILT NIL PLAYBOOK</div>
+              <h2>I’m Brian “BB” Knight.</h2>
+              <p className="founder-lede">I am not teaching NIL from the sidelines. I am a Division I basketball player, creator, graduate student, and founder who has had to build my own audience and commercial identity while navigating the same practices, injuries, transfers, travel, schoolwork, and uncertainty other athletes face.</p>
             </div>
           </div>
 
@@ -142,10 +142,12 @@ export default function LandingPage() {
           </div>
 
           <div className="founder-why">
-            <div className="kicker kicker-blue">WHY HE BUILT NIL PLAYBOOK</div>
-            <blockquote>“Athletes kept asking the same practical questions: How do I reach out? What do I use to edit? How do I make content? How do I balance being an athlete with building a brand?”</blockquote>
-            <p>That is the gap BB wants to close. NIL Playbook exists to give athletes the practical system he wishes more athletes had access to: how to position themselves, create consistently, package their value, pursue the right opportunities, and handle those opportunities professionally when they arrive.</p>
-            <p className="founder-source">Public background cross-checked against UTRGV Athletics, Tulsa Athletics, Lamar Athletics, Opendorse, and Postgame. Founder motivation and recurring athlete questions are based on BB’s September 2026 NIL Playbook strategy conversation.</p>
+            <div className="kicker kicker-blue">WHY THIS MATTERS TO ME</div>
+            <blockquote>“Athletes kept asking me the same practical questions: How do I reach out? What do I use to edit? How do I make content? How do I balance being an athlete with building a brand?”</blockquote>
+            <p>I know how hard it is to take basketball seriously while also trying to build something off the court. I have had to learn how to create content, grow an audience, understand my value, work with brands, and stay consistent without letting the game become secondary.</p>
+            <p>That is why I built NIL Playbook. I want to give other athletes the practical system I wish more of us had access to, so you can position yourself clearly, create consistently, package your value, pursue the right opportunities, and handle those opportunities professionally when they arrive.</p>
+            <p>I do not believe every athlete needs to become an influencer. I believe every athlete should understand how to use the attention, story, relationships, and opportunities that come with playing college sports to build something that can still matter after the jersey comes off.</p>
+            <p className="founder-source">Public background cross-checked against UTRGV Athletics, Tulsa Athletics, Lamar Athletics, Opendorse, and Postgame. Founder motivation and recurring athlete questions are based on my September 2026 NIL Playbook strategy conversation.</p>
           </div>
         </section>
 
