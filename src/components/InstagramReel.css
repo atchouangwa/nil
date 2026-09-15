@@ -1,0 +1,18 @@
+.founder-reel-shell {
+  width: min(100%, 560px);
+  margin: 34px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.founder-reel-shell .instagram-media {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+@media (max-width: 640px) {
+  .founder-reel-shell {
+    width: 100%;
+    margin-top: 26px;
+  }
+}
