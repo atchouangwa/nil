@@ -1,0 +1,130 @@
+.wistia-placeholder,
+.wistia-live {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #dfe5ea;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 18px 60px rgba(7,17,31,.08);
+}
+
+.wistia-placeholder-screen,
+.wistia-live {
+  aspect-ratio: 16 / 9;
+}
+
+.wistia-placeholder-screen {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  text-align: center;
+  color: #fff;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(22,135,255,.24), transparent 32%),
+    linear-gradient(180deg, #101c2d 0%, #07111f 100%);
+}
+
+.wistia-placeholder-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: .13;
+  background-image:
+    linear-gradient(rgba(255,255,255,.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.14) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.wistia-placeholder-play,
+.wistia-placeholder-meta {
+  position: relative;
+  z-index: 1;
+}
+
+.wistia-placeholder-play {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  color: #fff;
+  background: #1687ff;
+  box-shadow: 0 16px 36px rgba(22,135,255,.32);
+}
+
+.wistia-placeholder-meta {
+  max-width: 620px;
+  display: grid;
+  gap: 8px;
+}
+
+.wistia-placeholder-meta > span {
+  color: #79baff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+
+.wistia-placeholder-meta strong {
+  font-size: clamp(24px, 4vw, 38px);
+  line-height: 1.08;
+  letter-spacing: -.04em;
+}
+
+.wistia-placeholder-meta small {
+  color: #9eb0c3;
+  font-size: 11px;
+}
+
+.wistia-placeholder-footer {
+  min-height: 54px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: #64717e;
+  font-size: 10px;
+}
+
+.wistia-placeholder-footer > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wistia-placeholder-footer svg {
+  color: #1687ff;
+  flex: 0 0 auto;
+}
+
+.wistia-placeholder-footer code {
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: #edf2f6;
+  color: #25384d;
+  font-size: 9px;
+}
+
+@media (max-width: 640px) {
+  .wistia-placeholder,
+  .wistia-live {
+    border-radius: 16px;
+  }
+
+  .wistia-placeholder-screen {
+    padding: 20px;
+  }
+
+  .wistia-placeholder-play {
+    width: 62px;
+    height: 62px;
+  }
+
+  .wistia-placeholder-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
