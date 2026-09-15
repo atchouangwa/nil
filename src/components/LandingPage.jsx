@@ -5,6 +5,9 @@ import {
   GraduationCap, UsersThree, TrendUp
 } from '@phosphor-icons/react'
 import { Header, Footer } from './SiteChrome'
+import WistiaVideo from './WistiaVideo'
+
+const LANDING_VSL_ID = import.meta.env.VITE_WISTIA_LANDING_VSL || 'WISTIA_LANDING_VSL'
 
 const research = [
   { value: '59%', label: 'of surveyed athletes said they earned less from NIL than expected' },
@@ -73,15 +76,15 @@ export default function LandingPage() {
             <div className="hero-actions"><Cta /><a className="text-link" href="#how-it-works">See the 5-play system <ArrowRight size={15} /></a></div>
             <div className="hero-note"><ShieldCheck size={18} weight="fill" /><span>12-week high-touch implementation. No guaranteed sponsorships or income.</span></div>
 
-            <div className="hero-board compact-board" aria-label="NIL Playbook marketability system diagram">
-              <div className="board-top"><span>THE GAME PLAN</span><span>05 PLAYS</span></div>
-              <div className="board-field">
-                <div className="field-line field-line-a" /><div className="field-line field-line-b" />
-                <div className="route route-1" /><div className="route route-2" />
-                <div className="player p1">P</div><div className="player p2">C</div><div className="player p3">A</div><div className="player p4">O</div>
-                <div className="board-message"><span>FROM</span><strong>RANDOM NIL</strong><span>TO</span><strong>A PROFESSIONAL SYSTEM</strong></div>
-              </div>
-              <div className="board-bottom"><span>POSITION</span><span>PUBLISH</span><span>PACKAGE</span><span>PURSUE</span><span>PRO</span></div>
+            <div className="landing-vsl-shell">
+              <WistiaVideo
+                mediaId={LANDING_VSL_ID}
+                title="How College Athletes Can Build a Professional NIL Opportunity System"
+                eyebrow="NIL DEAL ACCELERATOR VSL"
+                duration="9 to 12 minutes"
+                chapters={['Who this is for', 'Why listen to me', 'The Marketability Gap', 'The 5-Play System', 'The offer and investment', 'Objections', 'Who should apply']}
+              />
+              <p className="landing-vsl-note">The script for this video is in docs/NIL_Deal_Accelerator_VSL_Scripts.md. Replace the placeholder with the Wistia hashed media ID when the final cut is uploaded.</p>
             </div>
           </div>
         </section>
