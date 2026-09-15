@@ -1,0 +1,43 @@
+.confirmation-video-shell {
+  margin-top: 30px;
+}
+
+.confirmation-video-library {
+  margin-top: 38px;
+  display: grid;
+  gap: 36px;
+}
+
+.confirmation-breakout {
+  padding-top: 34px;
+  border-top: 1px solid #dfe5ea;
+}
+
+.confirmation-breakout-copy {
+  max-width: 720px;
+  margin-bottom: 18px;
+}
+
+.confirmation-breakout-copy h3 {
+  margin: 8px 0 0;
+  font-size: clamp(27px, 4vw, 38px);
+  line-height: 1.08;
+  letter-spacing: -.04em;
+}
+
+.confirmation-breakout-copy p {
+  margin: 12px 0 0;
+  color: #63707d;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .confirmation-video-library {
+    gap: 30px;
+  }
+
+  .confirmation-breakout {
+    padding-top: 28px;
+  }
+}
