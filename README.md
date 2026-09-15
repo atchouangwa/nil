@@ -15,6 +15,7 @@ A conversion-focused book-a-call funnel for NIL Deal Accelerator.
 ## Environment variables
 - `VITE_CALENDLY_URL` - exact Calendly event URL. This is still required before the live scheduler can display.
 - `APPLICATION_WEBHOOK_URL` - optional webhook for application payloads, such as Attio, Make, Zapier, or an internal CRM endpoint.
+- `VITE_WISTIA_LANDING_VSL` - Wistia hashed media ID for the main landing-page VSL.
 - `VITE_WISTIA_CONFIRMATION_HERO` - Wistia hashed media ID for the main pre-call video.
 - `VITE_WISTIA_CONFIRMATION_FOLLOWING` - Wistia ID for the follower-count breakout video.
 - `VITE_WISTIA_CONFIRMATION_SYSTEM` - Wistia ID for the 5-Play system breakout video.
@@ -22,7 +23,7 @@ A conversion-focused book-a-call funnel for NIL Deal Accelerator.
 - `VITE_WISTIA_CONFIRMATION_INFLUENCER` - Wistia ID for the authenticity/influencer breakout video.
 - `VITE_WISTIA_CONFIRMATION_INVESTMENT` - Wistia ID for the $4,997 investment breakout video.
 
-Until real Wistia media IDs are supplied, `/confirmed` renders designed Wistia placeholders so production layout can be reviewed without broken embeds.
+Until real Wistia media IDs are supplied, the funnel renders designed Wistia placeholders so the production layout can be reviewed without broken embeds.
 
 ## VSL scripts
 The complete word-for-word VSL and pre-call video scripts are in:
