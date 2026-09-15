@@ -1,0 +1,17 @@
+.landing-vsl-shell {
+  margin-top: 38px;
+  width: 100%;
+}
+
+.landing-vsl-note {
+  margin: 12px 0 0;
+  color: #74808c;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .landing-vsl-shell {
+    margin-top: 28px;
+  }
+}
