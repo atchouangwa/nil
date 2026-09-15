@@ -7,31 +7,63 @@ import {
   UserCircle,
   VideoCamera,
   ShieldCheck,
-  PlayCircle,
   Target,
   ChatCircleText,
   ListChecks
 } from '@phosphor-icons/react'
 import Brand from './Brand'
-import InstagramReel from './InstagramReel'
+import WistiaVideo from './WistiaVideo'
 import './ConfirmedPage.css'
 
-const faqs = [
+const videos = {
+  hero: import.meta.env.VITE_WISTIA_CONFIRMATION_HERO || 'WISTIA_CONFIRMATION_HERO',
+  following: import.meta.env.VITE_WISTIA_CONFIRMATION_FOLLOWING || 'WISTIA_CONFIRMATION_FOLLOWING',
+  system: import.meta.env.VITE_WISTIA_CONFIRMATION_SYSTEM || 'WISTIA_CONFIRMATION_SYSTEM',
+  call: import.meta.env.VITE_WISTIA_CONFIRMATION_CALL || 'WISTIA_CONFIRMATION_CALL',
+  influencer: import.meta.env.VITE_WISTIA_CONFIRMATION_INFLUENCER || 'WISTIA_CONFIRMATION_INFLUENCER',
+  investment: import.meta.env.VITE_WISTIA_CONFIRMATION_INVESTMENT || 'WISTIA_CONFIRMATION_INVESTMENT'
+}
+
+const breakoutVideos = [
   {
-    question: 'Do I need a huge following for NIL to matter?',
-    answer: 'No. Audience size can matter, but it is only one part of marketability. Your positioning, content quality, audience fit, professionalism, reliability, story, geography, and ability to make a partnership useful to a brand can all matter too.'
+    number: '01',
+    mediaId: videos.following,
+    title: 'Do I need a huge following for NIL to matter?',
+    duration: '3 to 4 minutes',
+    summary: 'No. Audience size can matter, but it is only one part of marketability. This video explains the difference between having followers and becoming commercially understandable to the right brands.',
+    chapters: ['The short answer', 'What brands can evaluate', 'What to control next']
   },
   {
-    question: 'What does NIL Deal Accelerator actually help me build?',
-    answer: 'The program is built around five connected systems: Position, Publish, Package, Pursue, and Professionalize. The goal is to help you stop approaching NIL as random posts, random DMs, and random opportunities, and start operating with a repeatable athlete brand and opportunity system.'
+    number: '02',
+    mediaId: videos.system,
+    title: 'What does NIL Deal Accelerator actually help me build?',
+    duration: '4 to 5 minutes',
+    summary: 'This walks through the five connected systems behind the program: Position, Publish, Package, Pursue, and Professionalize, and why random NIL activity is not the same thing as having an operating system.',
+    chapters: ['The Marketability Gap', 'The five plays', 'What gets built with you']
   },
   {
-    question: 'What will happen on the strategy call?',
-    answer: 'We will review where your brand currently stands, identify the biggest gaps in your positioning, content, assets, and opportunity process, map the highest-leverage next steps, and determine whether NIL Deal Accelerator is the right fit. It is a strategy conversation first.'
+    number: '03',
+    mediaId: videos.call,
+    title: 'What actually happens on the strategy call?',
+    duration: '2 to 3 minutes',
+    summary: 'The call is a diagnosis first. We review your current brand, content, opportunity process, and goals, then determine what the highest-leverage next moves are and whether the Accelerator is a fit.',
+    chapters: ['What we review', 'What we diagnose', 'What happens at the end']
   },
   {
-    question: 'What if I do not want to become an influencer?',
-    answer: 'You do not have to. The point is not to manufacture a fake online personality. The strongest athlete brands are built around what is already true about you: your story, interests, values, community, goals, personality, and sport.'
+    number: '04',
+    mediaId: videos.influencer,
+    title: 'What if I do not want to become an influencer?',
+    duration: '3 to 4 minutes',
+    summary: 'You do not need to manufacture a fake online personality. This video explains how to build around your actual story, values, interests, community, goals, and sport without turning your life into nonstop ads.',
+    chapters: ['Influencer versus athlete brand', 'What authenticity actually means', 'How to create without forcing it']
+  },
+  {
+    number: '05',
+    mediaId: videos.investment,
+    title: 'Why invest $4,997 when there is free NIL information everywhere?',
+    duration: '4 to 5 minutes',
+    summary: 'Information is not the scarce part. The investment is for personalized strategy, implementation, feedback, professional assets, accountability, and a system built around your specific athlete brand.',
+    chapters: ['Free information versus implementation', 'What the investment covers', 'Who should not make the investment']
   }
 ]
 
@@ -89,39 +121,50 @@ export default function ConfirmedPage() {
         <section className="confirmation-hero-video" aria-labelledby="start-here-title">
           <div className="confirmation-section-copy">
             <div className="kicker kicker-blue">START HERE</div>
-            <h2 id="start-here-title">Why I believe your sport can become the vehicle for something bigger.</h2>
-            <p>This is not a generic “thanks for booking” video. It is the story behind why I started taking content seriously while still playing Division I basketball, what that decision opened up for me, and why I am committed to helping other athletes build something beyond the game.</p>
+            <h2 id="start-here-title">The NIL window is temporary. What you build from it does not have to be.</h2>
+            <p>In this video, I explain what one viral moment taught me about attention, why I kept building content while playing Division I basketball, and why I believe athletes should leave college with more than highlights and memories.</p>
           </div>
 
-          <div className="confirmation-reel-card">
-            <div className="confirmation-reel-label"><PlayCircle size={18} weight="fill" /> Watch before your call</div>
-            <InstagramReel />
+          <div className="confirmation-video-shell">
+            <WistiaVideo
+              mediaId={videos.hero}
+              title="Watch This Before Your NIL Strategy Call"
+              eyebrow="START HERE"
+              duration="6 to 7 minutes"
+              chapters={['Why this call exists', 'My NIL journey', 'The Marketability Gap', 'What to understand before we talk']}
+            />
           </div>
 
           <div className="founder-proof-quote">
             <div className="kicker">IN BB'S WORDS</div>
             <blockquote>“Last month, I contracted over $12,000 from social media, all while playing Division 1 basketball.”</blockquote>
-            <p>That is Brian “BB” Knight describing his own experience in the Reel above. Individual results vary. NIL Playbook does not guarantee sponsorships, income, follower growth, response rates, or any specific result.</p>
+            <p>This reflects Brian “BB” Knight's own stated experience and is not a representation or guarantee of what another athlete will earn. NIL Playbook does not guarantee sponsorships, income, follower growth, response rates, or any specific result.</p>
           </div>
         </section>
 
         <section className="confirmation-briefing">
           <div className="confirmation-section-copy centered-copy">
-            <div className="kicker">THE 4 THINGS TO UNDERSTAND BEFORE WE TALK</div>
-            <h2>Come into the call with clarity, not more random NIL advice.</h2>
-            <p>These are the questions that usually determine whether an athlete sees NIL as a popularity contest or as something they can learn to approach professionally.</p>
+            <div className="kicker">ANSWER THE QUESTIONS THAT MATTER TO YOU</div>
+            <h2>Pick the videos that match what you are thinking right now.</h2>
+            <p>Each video starts with the short answer, then goes deeper. You do not need to watch them in order. Use the chapters and consume the ones that help you arrive at the call better informed.</p>
           </div>
 
-          <div className="confirmation-faq-list">
-            {faqs.map((item, index) => (
-              <details key={item.question} open={index === 0}>
-                <summary>
-                  <span className="faq-number">0{index + 1}</span>
-                  <span>{item.question}</span>
-                  <span className="faq-plus">+</span>
-                </summary>
-                <p>{item.answer}</p>
-              </details>
+          <div className="confirmation-video-library">
+            {breakoutVideos.map((item) => (
+              <article className="confirmation-breakout" key={item.number}>
+                <div className="confirmation-breakout-copy">
+                  <span className="faq-number">{item.number}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.summary}</p>
+                </div>
+                <WistiaVideo
+                  mediaId={item.mediaId}
+                  title={item.title}
+                  eyebrow={`BREAKOUT ${item.number}`}
+                  duration={item.duration}
+                  chapters={item.chapters}
+                />
+              </article>
             ))}
           </div>
         </section>
