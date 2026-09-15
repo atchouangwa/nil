@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import LandingPage from './components/LandingPage'
+import LandingPageV2 from './components/LandingPageV2'
 import ApplyPage from './components/ApplyPage'
 import ConfirmedPage from './components/ConfirmedPage'
 import ReviewPage from './components/ReviewPage'
@@ -13,7 +13,7 @@ function ScrollTop() {
 
 export default function App() {
   const path = route()
-  let page = <LandingPage />
+  let page = <LandingPageV2 />
   if (path === '/apply') page = <ApplyPage />
   if (path === '/confirmed') page = <ConfirmedPage />
   if (path === '/review') page = <ReviewPage />
